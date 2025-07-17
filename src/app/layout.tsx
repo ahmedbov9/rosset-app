@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Baloo_Bhaijaan_2, Winky_Rough } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 const arabicFont = Baloo_Bhaijaan_2({
   subsets: ["arabic"],
@@ -20,10 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${arabicFont.className} antialiased`}>
-        <Navbar />
-        {children}
-      </body>
+      <body className={`${arabicFont.className} antialiased`}>{children}</body>
     </html>
   );
 }

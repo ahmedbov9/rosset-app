@@ -77,18 +77,14 @@ export default function Navbar() {
                 تسجيل الدخول
               </Button>
             </Link>
-            <a
-              href="https://wa.link/nyse0u"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/register">
               <Button
                 className="bg-yellow-300 text-red-600 hover:bg-yellow-200 px-5"
                 size="sm"
               >
                 التسجيل
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -169,17 +165,11 @@ export default function Navbar() {
               تسجيل الدخول
             </Button>
           </Link>
-          <a
-            href="https://wa.link/nyse0u"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeSidebar}
-            className="block"
-          >
+          <Link href="/register" onClick={closeSidebar} className="block">
             <Button className="w-full bg-red-600 text-white hover:bg-red-700">
-              التسجيل عبر واتساب
+              التسجيل
             </Button>
-          </a>
+          </Link>
         </div>
       </div>
     </>

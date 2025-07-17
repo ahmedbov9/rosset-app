@@ -1,15 +1,15 @@
 import { ArrowRight, User } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import Link from "next/link";
-import LoginForm from "./LoginForm";
 import Navbar from "@/components/Navbar";
+import RegisterForm from "./RegisterForm";
 
 export const metadata = {
-  title: "تسجيل الدخول",
-  description: "تسجيل الدخول للوصول الى الخدمات",
+  title: "انشاء حساب",
+  description: "انشاء حساب جديد للوصول الى الخدمات",
 };
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
     <>
       <Navbar />
@@ -21,25 +21,25 @@ export default function LoginPage() {
               <User className="h-10 w-10 text-yellow-300" />
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-3">
-              مرحباً بعودتك
+              انشاء حساب جديد
             </h1>
             <p className="text-gray-600 text-lg">
-              سجل دخولك للوصول إلى مساعدك الصوتي
+              انشاء حساب جديد للوصول إلى الخدمات
             </p>
           </div>
 
           {/* Login Form Card */}
-          <LoginForm />
+          <RegisterForm />
           {/* Register Link */}
           <div className="text-center">
             <div className="bg-red-50 rounded-2xl p-6 border border-red-100">
-              <p className="text-gray-600 text-lg mb-3">ليس لديك حساب بعد؟</p>
-              <Link href="/register">
+              <p className="text-gray-600 text-lg mb-3">لديك حساب بالفعل ؟</p>
+              <Link href="/login">
                 <Button
                   variant="outline"
                   className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-bold py-3 px-8 rounded-2xl transition-all duration-200"
                 >
-                  إنشاء حساب جديد
+                  تسجيل الدخول
                   <ArrowRight className="mr-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -49,7 +49,7 @@ export default function LoginPage() {
           {/* Footer */}
           <div className="text-center mt-8 text-sm text-gray-500">
             <p className="leading-relaxed">
-              بتسجيل الدخول، أنت توافق على{" "}
+              بانشاء حساب جديد، أنت توافق على{" "}
               <Link
                 href="/terms"
                 className="text-red-600 hover:text-red-700 transition-colors font-semibold hover:underline"

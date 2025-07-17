@@ -10,7 +10,6 @@ import {
   Info,
   Clock,
   CheckCircle,
-  ArrowRight,
   Zap,
 } from "lucide-react";
 
